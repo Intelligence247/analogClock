@@ -1,0 +1,147 @@
+* {
+    padding: 0;
+    margin: 0;
+    /* box-sizing: border-box; */
+}
+
+body {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #4d4d4d;
+}
+
+.clockwrapper {
+    background-color: #e6e6e6;
+    padding: 2rem;
+    height: max-content;
+    width: max-content;
+    border-radius: 70px;
+}
+
+.clock {
+    border-radius: 50%;
+    border: 7px solid #b3b3b3;
+    /* background-color: #ebebeb; */
+    background-color: #e2dfdf;
+    position: relative;
+    height: 20rem;
+    width: 20rem;
+    max-width: 20rem;
+    max-height: 20rem;
+}
+
+
+
+.num {
+    position: absolute;
+    transform: rotate(calc(30deg * var(--i)));
+    text-align: center;
+    inset: 1.7rem;
+}
+
+.num b {
+    position: absolute;
+    transform: rotate(calc(-30deg * var(--i)));
+}
+
+.hour,
+.min,
+.sec {
+    position: absolute;
+    transform-origin: left;
+    left: 50%;
+    top: 50%;
+    border-radius: 50px;
+    height: 0.5rem;
+    background-color: #383838;
+    width: 35%;
+
+}
+
+.hour {
+    width: 30%;
+    height: 0.6rem;
+}
+
+.sec {
+    height: 2px;
+    width: 44%;
+    background-color: #fdcf19;
+    z-index: 2;
+}
+
+.hour::before {
+    content: "";
+    position: absolute;
+    width: 2rem;
+    height: 0.4rem;
+    border-radius: 0px 50px 50px 0px;
+    background-color: red;
+    left: 65%;
+    bottom: 0;
+    top: 0.1rem;
+    background-color: #fdcf19;
+}
+
+.min::before {
+    content: "";
+    position: absolute;
+    width: 2rem;
+    height: 0.35rem;
+    border-radius: 0px 50px 50px 0px;
+    background-color: red;
+    left: 69.8%;
+    bottom: 0;
+    top: 0.08rem;
+    background-color: #fdcf19;
+}
+
+.sec::before {
+    content: "";
+    position: absolute;
+    width: 2rem;
+    height: 0.7rem;
+    border-radius: 50px;
+    background-color: red;
+    right: 95%;
+    bottom: 0;
+    top: -0.3rem;
+    background-color: #fdcf19;
+
+}
+
+.circ {
+    position: absolute;
+    left: 45.5%;
+    top: 46%;
+    width: 1.5rem;
+    border-radius: 50%;
+    height: 1.5rem;
+    background-color: #fdcf19;
+    border: 4px solid #f3f2f2;
+    z-index: 0;
+}
+
+.clock p {
+    width: 44%;
+    height: 2px;
+    border-right: 0.7rem solid #383838;
+    position: absolute;
+    display: flex;
+    left: 50%;
+    transform-origin: 0% 0%;
+    top: 50%;
+    transform: rotate(calc(6deg*var(--x)));
+}
+
+.clock .thick {
+    width: 43%;
+    height: 5px;
+    border-right: 1rem solid #383838;
+}
+
+/* clock bg-#e6e6e6 */
+/* sec bg-#fdcf16 */
