@@ -7,10 +7,9 @@
 body {
     height: 100vh;
     width: 100vw;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #4d4d4d;
+    display: grid;
+    place-items: center;
+    background-color: #e6e6e6;
     overflow: hidden;
 }
 
@@ -19,13 +18,13 @@ body {
     padding: 1rem;
     height: max-content;
     width: max-content;
-    border-radius: 50px;
+    border-radius: 10% 10% 50% 5px;
+    box-shadow: 10px 10px 30px 0px;
 }
 
 .clockcirc {
     border-radius: 50%;
     border: 7px solid #b3b3b3;
-    /* background-color: #ebebeb; */
     background-color: #e2dfdf;
     position: relative;
     height: 25rem;
@@ -159,12 +158,10 @@ body {
     width: max-content;
     gap: 2rem;
     height: max-content;
-    padding: 0rem 0.7rem 0.5rem 0.7rem;
+    padding: 0.4rem 0.7rem 1rem 0.7rem;
     margin: auto;
-    border: 4px double chartreuse;
+    border-radius: 10px;
     box-shadow: indigo 1px 1px 9px;
-    background-color: darkgray;
-
 }
 
 
@@ -183,7 +180,6 @@ body {
     font-size: 2.5rem;
     height: 2rem;
     text-shadow: 0px 0px 2px;
-    /* box-shadow: 0px 0px 2px; */
 }
 
 .mind::after,
@@ -191,7 +187,7 @@ body {
 .secd::after {
     content: ':';
     position: absolute;
-    left: 2.5rem;
+    left: 3rem;
     top: -0.2rem;
 }
 
